@@ -1,0 +1,182 @@
+@import url(/home/prethush/Documents/AltCampus/TA-STYLE-CSS-Animation-THaaat/block-BHaadh/assets/stylesheet/_reset.css);
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: -webkit-gradient(linear, right top, left bottom, from(aqua), to(rgba(0, 0, 255, 0.5)));
+  background: linear-gradient(top right, aqua, rgba(0, 0, 255, 0.5));
+  padding: 0;
+  margin: 0;
+  padding-bottom: 200vh;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem 0;
+  color: red;
+  font-size: 3rem;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+}
+
+.box-area {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.box-area:hover {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 0, 0);
+            transform: rotate3d(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 1, 0, 360deg);
+            transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 0, 0);
+            transform: rotate3d(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 1, 0, 360deg);
+            transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+.box {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border: 2px solid #262626;
+}
+
+.box-front {
+  -webkit-transform: translateX(-200px) translateY(-200px) translateZ(200px);
+          transform: translateX(-200px) translateY(-200px) translateZ(200px);
+  background: rgba(255, 16, 107, 0.5);
+}
+
+.box-back {
+  -webkit-transform: translateX(-200px) translateY(-200px) translateZ(-200px);
+          transform: translateX(-200px) translateY(-200px) translateZ(-200px);
+  background: rgba(1, 251, 236, 0.5);
+}
+
+.box-right {
+  -webkit-transform: translateY(-200px) rotateY(90deg);
+          transform: translateY(-200px) rotateY(90deg);
+  background: rgba(4, 255, 116, 0.5);
+}
+
+.box-left {
+  -webkit-transform: translateY(-200px) translateX(-400px) rotateY(90deg);
+          transform: translateY(-200px) translateX(-400px) rotateY(90deg);
+  background: rgba(216, 255, 0, 0.5);
+}
+
+.box-bottom {
+  -webkit-transform: translateX(-200px) rotateX(90deg);
+          transform: translateX(-200px) rotateX(90deg);
+  background: rgba(255, 30, 0, 0.5);
+}
+
+.box-top {
+  -webkit-transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+          transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+  background: rgba(0, 6, 246, 0.5);
+}
+
+.box-area {
+  -webkit-transform: rotateX(90deg) rotateY(90deg);
+          transform: rotateX(90deg) rotateY(90deg);
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  top: 100vh;
+  left: 40vw;
+}
+
+.cube:hover {
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.side {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.side.top {
+  background-color: rgba(255, 0, 0, 0.5);
+  -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+          transform: rotate(-45deg) skew(15deg, 15deg);
+}
+
+.side.left {
+  background-color: rgba(238, 130, 238, 0.5);
+  -webkit-transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+          transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+}
+
+.side.right {
+  background-color: rgba(0, 128, 0, 0.5);
+  -webkit-transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+          transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: rotateY(0) scale(0.5);
+            transform: rotateY(0) scale(0.5);
+  }
+  100% {
+    -webkit-transform: rotateY(-720deg) scale(2);
+            transform: rotateY(-720deg) scale(2);
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: rotateY(0) scale(0.5);
+            transform: rotateY(0) scale(0.5);
+  }
+  100% {
+    -webkit-transform: rotateY(-720deg) scale(2);
+            transform: rotateY(-720deg) scale(2);
+  }
+}
+/*# sourceMappingURL=style.css.map */
